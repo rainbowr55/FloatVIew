@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rainbow.rainbow.firstmacandroid" >
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="xvtian.gai.receiver"></uses-permission>
+
+    <permission
+        android:protectionLevel="normal"
+        android:name="xvtian.gai.receiver"></permission>s
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -9,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".TestBroadcastActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name=".Receiver"
+            android:permission="xvtian.gai.receivers">
+            <intent-filter>
+                <action android:name="COM.MESSAGE" />
+                <category android:name="receiver" />
+            </intent-filter>
+        </receiver>
     </application>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
 </manifest>
