@@ -80,6 +80,7 @@ public class MainActivity extends ActionBarActivity {
                 Toast.makeText(MainActivity.this,"float View clicked!",Toast.LENGTH_SHORT).show();
             }
         });
+        //test
 
     }
 
